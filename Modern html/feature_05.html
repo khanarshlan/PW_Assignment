@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Features Demo</title>
+    <style>
+        /* Add some basic styling for clarity */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exploring HTML5 Features</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#semantic">Semantic Elements</a></li>
+            <li><a href="#video">Video Element</a></li>
+            <li><a href="#storage">Web Storage</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="semantic">
+            <h2>Semantic Elements</h2>
+            <p>HTML5 introduces a set of semantic elements that provide a more meaningful structure to web documents. These elements help assistive technologies and search engines better understand the content.</p>
+        </section>
+        
+        <section id="video">
+            <h2>Video Element</h2>
+            <p>The &lt;video&gt; element allows you to embed video content directly in your web page without relying on third-party plugins. It supports various video formats and provides a native video player with playback controls.</p>
+            <video  width="640" height="360"controls>
+                <source src="./pexels-tima-miroshnichenko-5377271 (2160p).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        
+        <section id="storage">
+            <h2>Web Storage</h2>
+            <p>HTML5 introduced the Web Storage API, which allows web applications to store data locally in the user's browser. There are two types of web storage: localStorage for persistent storage and sessionStorage for session-specific storage.</p>
+            <script>
+                // Example of using localStorage
+                localStorage.setItem('username', 'john_doe');
+                const storedUsername = localStorage.getItem('username');
+                document.write(`<p>Stored Username: ${storedUsername}</p>`);
+            </script>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 HTML5 Features Demo</p>
+    </footer>
+</body>
+</html>
