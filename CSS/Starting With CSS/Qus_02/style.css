@@ -1,0 +1,20 @@
+/* styles.css */
+
+/* Block-level style for paragraphs */
+.paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Modifier for highlighting */
+.paragraph--highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Element-level style for additional info */
+.paragraph__info {
+    color: gray;
+    font-style: italic;
+}

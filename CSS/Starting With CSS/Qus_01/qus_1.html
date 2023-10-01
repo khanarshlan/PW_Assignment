@@ -1,0 +1,55 @@
+<!-- div1 is styled with internal CSS.
+
+.styled-div elements are styled with internal CSS.
+
+div3 is styled with external CSS.
+
+The last <div> with class .styled-div is styled with inline CSS, which takes precedence over the internal and external CSS for that specific element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    
+    <!-- Internal CSS (inside <style> tags) -->
+    <style>
+        /* Styles for div with id="div1" */
+        #div1 {
+            background-color: lightblue;
+            color: navy;
+        }
+
+        /* Styles for div with class="styled-div" */
+        .styled-div {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+
+    <!-- External CSS (linked from styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Inline CSS for div with id="div2" -->
+    <div id="div1">
+        <p>This is div 1 with internal CSS.</p>
+    </div>
+
+    <!-- Internal CSS for div with class="styled-div" -->
+    <div class="styled-div">
+        <p>This is a styled div using internal CSS.</p>
+    </div>
+
+    <!-- External CSS for div with id="div3" -->
+    <div id="div3" class="styled-div">
+        <p>This is div 3 with external CSS.</p>
+    </div>
+
+    <!-- Inline CSS for div with class="styled-div" -->
+    <div class="styled-div" style="color: red;">
+        <p>This is a styled div with inline CSS.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* styles.css (External CSS) */
+
+/* Styles for div with id="div3" */
+#div3 {
+    background-color: lightgreen;
+}
+
+/* Additional styles for div with class="styled-div" */
+.styled-div {
+    border: 2px solid black;
+}
