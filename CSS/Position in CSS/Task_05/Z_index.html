@@ -1,0 +1,56 @@
+`z-index` is a CSS property that controls the stacking order of elements in the vertical (z-axis) dimension on a webpage. It's often used to determine which elements should appear in front of or behind others, especially when elements overlap.
+
+Here's an example of how `z-index` works with HTML and CSS:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+
+  #box1 {
+    background-color: red;
+    z-index: 2;
+  }
+
+  #box2 {
+    background-color: blue;
+    z-index: 1;
+    left: 50px;
+  }
+
+  #box3 {
+    background-color: green;
+    z-index: 3;
+    left: 100px;
+  }
+</style>
+</head>
+<body>
+  <div class="box" id="box1"></div>
+  <div class="box" id="box2"></div>
+  <div class="box" id="box3"></div>
+</body>
+</html>
+```
+<br><br><br><br><br><br><br>
+In this example:
+- We have three `<div>` elements (`.box`) positioned absolutely.
+- Each box has a different background color and a `z-index` value that determines the stacking order.
+
+
+- `z-index` values can be positive or negative integers, with higher values appearing in front of lower values.
+- The red box (`#box1`) has the highest `z-index` (2), so it appears in front of the other boxes.
+
+- The blue box (`#box2`) has a lower `z-index` (1) and is partially covered by the red box.
+
+- The green box (`#box3`) has the highest `z-index` (3), so it appears in front of both the red and blue boxes.
+
+The stacking order is determined by the `z-index` values, and elements with higher values are layered on top of those with lower values. If two elements have the same `z-index`, their order in the HTML source determines which one appears on top.
+
+It's important to note that `z-index` works when an element's `position` property is set to a value other than `static` (e.g., `relative`, `absolute`, or `fixed`). Elements with `position: static` cannot have a `z-index` applied to them.
